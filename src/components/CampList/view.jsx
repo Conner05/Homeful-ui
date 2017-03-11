@@ -1,4 +1,5 @@
 import React from 'react';
+import Test from '~/components/test';
 import styles from './styles.scss';
 
 let View = ({campList}) => (
