@@ -124,10 +124,10 @@ const {
   NODE_ENV
 } = process.env; // eslint-disable-line no-process-env
 
-if (NODE_ENV === 'development') {
+// if (NODE_ENV === 'development') {
   config.devtool = 'eval';
   config.entry.hot = [
-    `webpack-dev-server/client?http://0.0.0.0:${PORT}`, // WebpackDevServer host and port
+    `webpack-dev-server/client?http://0.0.0.0:3010`, // WebpackDevServer host and port
     'webpack/hot/only-dev-server' // "only" prevents reload on syntax errors
   ];
   config.plugins = [
@@ -137,6 +137,6 @@ if (NODE_ENV === 'development') {
     dashboardPlugin,
     hotReloaderPlugin
   ];
-}
+// }
 
 export default config;
