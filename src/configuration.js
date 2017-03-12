@@ -1,1 +1,3 @@
-export const CAMP_LIST_ENDPOINT = 'https://dl.dropboxusercontent.com/u/5076962/NeedsData.txt';
+export const CAMP_LIST_ENDPOINT     = 'http://homefulapi.azurewebsites.net/api/locations';
+export const OCCUPANT_LIST_ENDPOINT = 'http://homefulapi.azurewebsites.net/api/occupants';
+export const NEED_LIST_ENDPOINT     = 'http://homefulapi.azurewebsites.net/api/needs';
