@@ -8,6 +8,7 @@
 
 files:
   include: '**/*.s+(a|c)ss'
+  ignore: './build/**/*.scss'
 options:
   formatter: stylish
   merge-default-rules: false
