@@ -1,5 +1,6 @@
 import reqwest from 'reqwest';
 import {CAMP_LIST_ENDPOINT} from '~/configuration';
+import {getAddNeedForm} from '~/state/selectors';
 import {LOAD_CAMP_LIST} from '~/state/reducers/campList';
 
 // actions
@@ -17,4 +18,16 @@ export let ajaxFetchCampList = (dispatch) => {
   };
 
   return loadCampListFromJson();
+};
+
+export let addNeed = (dispatch, getState) => {
+  let state = getState();
+  let serializedForm = getAddNeedForm(state);
+
+  let performRequest = async () => {
+    let response = await reqwest(serializedForm);
+    console.log(response);
+  };
+
+  performRequest();
 };

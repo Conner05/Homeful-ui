@@ -4,7 +4,7 @@ import {ajaxFetchCampList} from '~/state/actions';
 import {getCampList} from '~/state/selectors';
 import View from './view';
 
-class Layout extends Component {
+class CampList extends Component {
   componentDidMount() {
     let {dispatch} = this.props;
     dispatch(ajaxFetchCampList);
@@ -21,6 +21,6 @@ let mapStateToProps = (state) => ({
   campList: getCampList(state)
 });
 
-let WrappedContainer = connect(mapStateToProps)(Layout);
+let WrappedContainer = connect(mapStateToProps)(CampList);
 
 export default WrappedContainer;
