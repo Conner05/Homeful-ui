@@ -5,6 +5,8 @@ import SingleCamp from './SingleCamp/SingleCamp.js';
 import AddCamper from './AddCamper/AddCamper.js';
 import AddCamp from './AddCamp/AddCamp.js';
 import AddNeed from './AddNeed/AddNeed.js';
+import PackingList from './PackingList/PackingList.js';
+import CamperList from './CamperList/CamperList.js';
 
 class App extends Component {
   render() {
@@ -15,6 +17,8 @@ class App extends Component {
         <AddCamper/>
         <AddCamp/>
         <AddNeed/>
+        <PackingList/>
+        <CamperList/>
 
 
         </div>

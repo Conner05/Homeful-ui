@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 
-import copy from '../../copy';
+
 
 class CampList extends Component {
     render() {
@@ -11,7 +11,7 @@ class CampList extends Component {
                         <div className="card">
                             <div className="card-image">
                                 <img src="http://images.popmatters.com/news_art/t/tentless.jpg"/>
-                                <span className="card-title">{copy.campName}</span>
+                            <span className="card-title">{this.props.campName}</span>
                                 </div>
                             <div className="card-action center-align">
 
