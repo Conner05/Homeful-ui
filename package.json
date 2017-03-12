@@ -44,10 +44,10 @@
     "redux-form": "^6.5.0",
     "redux-logger": "^2.7.4",
     "redux-thunk": "^2.1.0",
-    "reqwest": "^2.0.5",
     "sass-lint": "^1.10.2",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
+    "superagent": "^3.5.0",
     "webpack": "^1.14.0",
     "webpack-dashboard": "^0.2.1",
     "webpack-dev-server": "^1.16.2"
