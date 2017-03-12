@@ -1,6 +1,6 @@
 import reqwest from 'reqwest';
 import {CAMP_LIST_ENDPOINT} from '~/configuration';
-import {getAddNeedForm} from '~/state/selectors';
+import {getAddNeedForm} from '~/state/reducers';
 import {LOAD_CAMP_LIST} from '~/state/reducers/campList';
 
 // actions
