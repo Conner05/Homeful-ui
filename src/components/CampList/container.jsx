@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {ajaxFetchCampList} from '~/state/actions';
-import {getCampList} from '~/state/selectors';
+import {getCampList} from '~/state/reducers';
 import View from './view';
 
 class CampList extends Component {
