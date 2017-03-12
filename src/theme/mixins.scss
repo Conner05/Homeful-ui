@@ -1,0 +1,19 @@
+@import "~theme/metrics.scss";
+
+@mixin Size($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin Medium {
+  @include Size($medium-width) {
+    @content;
+  }
+}
+
+@mixin Large {
+  @include Size($large-width) {
+    @content;
+  }
+}

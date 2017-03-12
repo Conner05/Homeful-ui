@@ -1,0 +1,8 @@
+@import "~theme/metrics.scss";
+@import "~theme/mixins.scss";
+@import "~theme/colors.scss";
+
+.container {
+  padding: $gutter-width;
+  font-size: 1.6em;
+}
