@@ -1,4 +1,3 @@
-import process from 'process';
 import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -119,24 +118,19 @@ let config = {
   }
 };
 
-const {
-  PORT,
-  NODE_ENV
-} = process.env; // eslint-disable-line no-process-env
-
 // if (NODE_ENV === 'development') {
-  config.devtool = 'eval';
-  config.entry.hot = [
-    `webpack-dev-server/client?http://0.0.0.0:3010`, // WebpackDevServer host and port
-    'webpack/hot/only-dev-server' // "only" prevents reload on syntax errors
-  ];
-  config.plugins = [
-    templatePlugin,
-    occurrenceOrderPlugin,
-    vendorsPlugin,
-    dashboardPlugin,
-    hotReloaderPlugin
-  ];
+config.devtool = 'eval';
+config.entry.hot = [
+  'webpack-dev-server/client?http://0.0.0.0:3010', // WebpackDevServer host and port
+  'webpack/hot/only-dev-server' // "only" prevents reload on syntax errors
+];
+config.plugins = [
+  templatePlugin,
+  occurrenceOrderPlugin,
+  vendorsPlugin,
+  dashboardPlugin,
+  hotReloaderPlugin
+];
 // }
 
 export default config;
