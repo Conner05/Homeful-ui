@@ -1,4 +1,4 @@
-import reqwest from 'reqwest';
+import request from 'superagent';
 import {CAMP_LIST_ENDPOINT} from '~/configuration';
 import {getAddNeedForm} from '~/state/reducers';
 import {LOAD_CAMP_LIST} from '~/state/reducers/campList';
@@ -10,7 +10,8 @@ let loadCampListActionCreator = (data) => ({type: LOAD_CAMP_LIST, data});
 export let ajaxFetchCampList = (dispatch) => {
   let loadCampListFromJson = async () => {
     try {
-      let campList = JSON.parse(await reqwest(CAMP_LIST_ENDPOINT));
+      let response = await request.get(CAMP_LIST_ENDPOINT);
+      let campList = JSON.parse(response.text);
       return dispatch(loadCampListActionCreator(campList));
     } catch (err) {
       throw new Error(err);
@@ -20,12 +21,12 @@ export let ajaxFetchCampList = (dispatch) => {
   return loadCampListFromJson();
 };
 
-export let addNeed = (dispatch, getState) => {
+export let addCamp = (dispatch, getState) => {
   let state = getState();
   let serializedForm = getAddNeedForm(state);
 
   let performRequest = async () => {
-    let response = await reqwest(serializedForm);
+    let response = await request.post(CAMP_LIST_ENDPOINT).send(serializedForm);
     console.log(response);
   };
 

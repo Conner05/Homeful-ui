@@ -14,6 +14,6 @@ export default rootReducer;
 export let getCampList = (state) => fromCampList.getCampList(state.campList);
 
 export let getAddNeedForm = (state) => {
-  let selector = formValueSelector(FORM_NAMES.ADD_NEED);
-  return selector(state, 'username', 'password');
+  let selector = formValueSelector(FORM_NAMES.ADD_CAMP);
+  return selector(state, 'Name', 'Latitude', 'Longitude', 'Notes');
 };
